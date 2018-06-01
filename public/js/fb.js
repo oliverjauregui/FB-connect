@@ -1,7 +1,7 @@
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '204480973615579',
-        cookie     : true,  // enable cookies to allow the server to access 
+        cookie     : true,  // enable cookies to allow the server to access
             // the session
         xfbml      : true,  // parse social plugins on this page
         version    : 'v2.12' // use graph api version 2.8
@@ -28,7 +28,7 @@ function loginUsingFacebook() {
             statusChangeCallback(response);
         });
     }, {
-    scope: 'email', 
+    scope: 'email',
     return_scopes: true
 });
 }
@@ -38,12 +38,12 @@ function logoutFacebook() {
       statusChangeCallback(response);
     });
   });
-      
+
 }
 /* Estatus del login */
 function statusChangeCallback(response) {
- 
-  var fbLogin = document.getElementById('loginfacebook'), 
+
+  var fbLogin = document.getElementById('loginfacebook'),
       fbLogout = document.getElementById('logoutfacebook');
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
@@ -61,7 +61,7 @@ function statusChangeCallback(response) {
     // The person is not logged into Facebook, so we're not sure if
     // they are logged into this app or not.
       // La persona no esta logeado en facebook y tampoco en la app.
-    var user = document.getElementById('user');  
+    var user = document.getElementById('user');
     fbLogin.style.display = 'inline';
     fbLogout.style.display = 'none';
     fbLogout.style.display = 'none';
@@ -77,7 +77,7 @@ function accesoUser(a) {
     //console.log('Welcome!  Fetching your information.... ');
     FB.api('/me',{fields:'id, name, first_name, last_name, email'}, function(response) {
         //console.log('Successful login for: ' + response.name);
-        document.getElementById('user').innerHTML = 'Bienvenido, ' + response.name + '!';
-        
+        document.getElementById('user').innerHTML = response.name;
+
     });
 }

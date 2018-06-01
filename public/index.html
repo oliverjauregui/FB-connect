@@ -1,53 +1,167 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>FB</title>
-    <style>
-    
-        #loginfacebook{
-            color: #000;
-            padding: 10px;
-            background-color: chocolate;
-            cursor: pointer;
-            border-radius: 7px;
-            font-family: arial;
-            font-size: 12px;
-        }
-        #logoutfacebook{
-            color: #000;
-            padding: 10px;
-            background-color: chocolate;
-            cursor: pointer;
-            border-radius: 7px;
-            font-family: arial;
-            font-size: 12px;
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oliver Jauregui</title>
+  <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&amp;subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.png">
 </head>
 <body>
-<h1>Fb Connect</h1>
-<a id="loginfacebook">Ingresar al sistema</a>
-<div id="user"></div>
-<a id="logoutfacebook">Cerrar sesión</a>
-<script src="js/jquery.js"></script>
-<script src="js/fb.js"></script>
-<script>
 
-    $(document).ready(function(){
-        $('#loginfacebook').click(function(){
-            
-            loginUsingFacebook();
-            
-        });
-        $('#logoutfacebook').click(function(){
-            
-            logoutFacebook();
-            
-        });
-    })
-    
-</script>
+  <div id="loader-wrapper">
+	  <div id="loader"></div>
+
+	  <div class="loader-section section-left"></div>
+	  <div class="loader-section section-right"></div>
+
+	</div>
+	<header class="header">
+		<nav class="header__nav">
+			<img src="images/logo1.svg" alt="logo" height="40">
+			<ul class="list">
+				<li class="list__item"><a class="list__item__a" href="#home">START</a></li>
+				<li class="list__item"><a class="list__item__a" href="#about">ABOUT ME</a></li>
+				<li class="list__item"><a class="list__item__a" href="#services">SERVICES</a></li>
+				<li class="list__item"><a class="list__item__a" href="#contact">CONTACT ME</a></li>
+        <li class="list__item"><a class="list__item__a" id="loginfacebook">Ingresar al sistema</a></li>
+
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section id="home" class="home">
+			<div class="home__text">
+				<h3>Hello,</h3>
+				<h1>
+					<span class="home__text__first">I’M</span>
+					<span class="home__text__second"><b id="user">OLIVER JAUREGUI</b></span>
+				</h1>
+				<ul class="home__text__list">
+					<li>UX/UI DESIGNER</li>
+					<li>FRONTEND DEVELOPER</li>
+				</ul>
+			</div>
+		</section>
+		<section id="about" class="about">
+			<h2 class="section__title">HELLO, I AM OLIVER JAUREGUI!</h2>
+			<div class="about__content">
+				<div id="traslateLeft1" class="about-me animated fadeInLeft">
+					<h4 class="about-me__h4">SOME WORDS ABOUT ME</h4>
+					<p>Hola! Mi nombre es Oliver Jauregui soy diseñador UX/UI Junior y desarrollador Frontend de la carrera de "Diseño y Dearrollo para Medios Digitales" de el instituto Touluse Lautrec.</p>
+                    <p>Con conocimientos en las tecnologias de HTML5, CSS3, SASS, ES6 y conocimientos de los Frameworks de Bootstrap y Bulma.</p>
+                    <p>Interesado en el desarrollo profesional continuo con enfoque futuro en las tecnologias de Internet de las cosas, Design Thinking y Computer Vision.</p>
+				</div>
+				<div id="traslateRight1" class="my-skills animated fadeInRight">
+					<h4 class="about-me__h4">MY SKILLS</h4>
+					<div class="skill" style="margin-top: 0;">
+						<div class="skill__label"><p>PHOTOSHOP <span>/ 2 YEARS OF EXPERIENCE<span></p><p>50%</p></div>
+						<div class="skill__container"><div class="skill__container__content" style="width:50%;"></div></div>
+					</div>
+					<div class="skill">
+						<div class="skill__label"><p>HTML <span>/ 6 MONTHS OF EXPERIENCE<span></p><p>75%</p></div>
+						<div class="skill__container"><div class="skill__container__content" style="width:75%;"></div></div>
+					</div>
+					<div class="skill">
+						<div class="skill__label"><p>CSS / SASS <span>/ 6 MONTHS OF EXPERIENCE<span></p><p>65%</p></div>
+						<div class="skill__container"><div class="skill__container__content" style="width:65%;"></div></div>
+					</div>
+					<div class="skill">
+						<div class="skill__label"><p>JS / NODE JS <span>/ 6 MONTHS OF EXPERIENCE<span></p><p>30%</p></div>
+						<div class="skill__container"><div class="skill__container__content" style="width:30%;"></div></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services" class="services">
+			<div class="services__container">
+				<h2 class="section__title black">THIS IS WHAT I DO</h2>
+				<div class="services__container__div fade fadeIn" id="fadeIn">
+					<div class="services__ux square-wrap">
+						<span class="icon-tools"></span>
+						<h4 class="services__ux__content__h4">UX / UI design</h4>
+						<p class="services__ux__content__p">Diseño pensado en la experiencia del usuario desde wireframes y prototipos hasta interfaces finales.</p>
+					</div>
+					<div class="services__frontend square-wrap">
+						<span class="icon-laptop"></span>
+						<h4 class="services__ux__content__h4">Web Development</h4>
+						<p class="services__ux__content__p">Desarrollo web Frontend con HTML5, CSS3 y el ES6 y alguno de sus Frameworks. Y Backend con NodeJS.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact" class="contact">
+			<h2 class="section__title">CONTACT</h2>
+			<div>
+				<div class="form">
+					<form action="#" method="post">
+						<div class="form__group">
+							<label id="label-name" class="form__group__label" for="form-name">NAME*</label>
+							<input class="form__group__input" type="text" id="form-name" required>
+						</div>
+						<div class="form__group">
+							<label id="label-email" class="form__group__label" for="form-email">E-MAIL*</label>
+							<input class="form__group__input" type="text" id="form-email" required>
+						</div>
+						<div class="form__group">
+							<label id="label-subject" class="form__group__label" for="form-subject">SUBJECT</label>
+							<input class="form__group__input" type="text" id="form-subject" required>
+						</div>
+						<div class="form__group">
+							<label id="label-textarea" class="form__group__label" for="form-message">TYPE YOUR MESSAGE HERE*</label>
+							<textarea class="form__group__input" id="form-message" required></textarea>
+						</div>
+						<input type="submit" id="send" class="button__submit">
+					</form>
+				</div>
+				<div></div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="footer__container">
+			<div class="footer-contacts">
+	            <div class="footer-contact" style="margin-bottom: 10px;"><i class="fa fa-phone-square"></i> +51 123 456 789</div>
+	            <div class="footer-contact"><i class="fa fa-envelope-square"></i> oliver.jauregui20@gmail.com</div>
+            </div>
+			<div class="footer-logo">
+			    <img src="images/logo1.svg" alt="oliverjauregui" style="height: 45px;">
+			    <div class="copyrights">© 2017 Oliver J.</div>
+			</div>
+			<div class="footer-socials">
+		        <a href="#"><i class="fa fa-facebook-square social" aria-hidden="true"></i></a>
+		        <a href="https://github.com/oliverjauregui"><i class="fa fa-github social" aria-hidden="true"></i></a>
+		        <a href="#"><i class="fa fa-twitter-square social" aria-hidden="true"></i></a>
+		        <a href="#"><i class="fa fa-behance-square social" aria-hidden="true"></i></a>
+		    	<a href="#"><i class="fa fa-linkedin-square social" aria-hidden="true"></i></a>
+		    </div>
+		</div>
+	</footer>
+
+  <script>
+
+      $(document).ready(function(){
+          $('#loginfacebook').click(function(){
+
+              loginUsingFacebook();
+
+          });
+          $('#logoutfacebook').click(function(){
+
+              logoutFacebook();
+
+          });
+      })
+
+  </script>
+  <script src="js/jquery.js"></script>
+  <script src="js/fb.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+	<script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+	<script type="text/javascript" src="js/lib/greensock/tweenMax.min.js"></script>
 </body>
 </html>
